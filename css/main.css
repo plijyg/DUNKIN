@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+body { font-size: 1.6rem; font-family: "Noto Sans KR", "sans-serif", "NanumGothic";  line-height: 1.5; color: #000; }
+#wrap { overflow: hidden; position: relative; min-width: 1400px; }
+.inner { max-width: 1400px; width: 100%; margin: 0 auto; }
+
+#header { min-width: 1400px;}
+#header .content_inner { width: 1400px; margin: 0 auto; }
+#header .content_1 .content_inner { position: relative; }
+#header .logo { text-align: center; padding: 40px 0; }
+
+#header .home { position: absolute; left: 0; top: 50%; margin-top: -20px; }
+#header .home li { float: left; padding-right: 20px; }
+#header .etc { position: absolute; right: 0; top: 50%; margin-top: -20px; }
+#header .etc li { float: left; padding-left: 30px; }
+
+#header .gnb_wrap { background: #FFEFCA; border-bottom: 1px solid #FF6D0D; }
+#header .gnb { display: flex; justify-content: space-between; margin-right: 90px; }
+#header .gnb > li { position: relative; }
+#header .gnb > li > a { display: block; padding: 20px;  } 
+#header .gnb li a { font-size: 1.6rem; font-weight: 700;  }
+
+/* 2차메뉴 */
+#header .gnb > li { position: relative; }
+#header .gnb > li .depth2 { display: none; width: 200px; position: absolute; left: calc(50% - 100px);  z-index: 3; }
+#header .gnb > li .depth2 li a { display: block; padding: 10px 0; color: #666; text-align: center; }
+
+/* 검색영역 */
+#header .search { background: #FFEFCA; height: 250px; position: absolute; left: 0; top: 194px; width: 100%; z-index: 3; }
+#header .search div { display: flex; justify-content: center; padding-top: 100px; }
+#header .search div input[type="search"] { width: 500px; height: 40px; background: #FFEFCA; border-bottom: 3px solid #000; font-size: 1.6rem; font-family: var(--main-font); }
+#header .search div input[type="submit"] { width: 40px; height: 40px; background: url(../img/search.png) no-repeat center; border-bottom: 3px solid #000; cursor: pointer; font-size: 0; }
+#header .search .search_close { background: #000 url(../img/ico_close_w.png) no-repeat center; width: 50px; height: 50px; border: 0; font-size: 0; cursor: pointer; position: absolute; left: calc(50% - 25px); bottom: 0; }
+
+#main h2 { font-size: 5.4rem; text-align: center; font-family: "Baloo 2"; font-weight: 700; color: #FF6D0D; padding: 130px 0; }
+
+#main .mv_txt h3 { font-size: 8rem; color: #fff; font-family: "Baloo 2"; line-height: 80px; }
+#main .mv_txt p { font-size: 2.1rem; color: #fff; margin-top: 20px; font-family: "Noto Sans KR", sans-serif; }
+#main_banner .mv1 { position: relative; height: 640px; background: url(../img/header_img1.jpg) no-repeat center; }
+#main_banner .mv2 { position: relative; height: 640px; background: url(../img/header_img2.jpg) no-repeat center; }
+#main_banner .mv3 { position: relative; height: 640px; background: url(../img/header_img3.jpg) no-repeat center; }
+#main .mv_txt { padding: 150px 0 50px 38%; }
+
+#main_banner .swiper-button-prev { color: #FF6D0D; margin-left: 14%; }
+#main_banner .swiper-button-next { color: #FF6D0D; margin-right: 14%; }
+#main_banner .swiper-pagination-clickable { margin-bottom: 30px; }
+#main_banner .swiper-pagination-bullet-active { background: #FF6D0D;  }
+
+/* best */
+#best { text-align: center; }
+#best ul li a::before { transition: all 0.3s; content: ""; display: block; width: 310px; height: 310px; border: 5px dotted #FF6D0D; border-radius: 50%; position: absolute; right: 60px; top: 0; z-index: -1; transform: scale(0,0); }
+#best ul li:hover a::before { transform: scale(1,1); }
+#best .swiper-button-prev { color: #FF6D0D; }
+#best .swiper-button-next { color: #FF6D0D; }
+
+/* promotion */
+#promotion { position: relative; }
+#promotion h2 { background: #FFEFCA; margin-top: 240px; padding: 80px 0 !important; position: relative; }
+#promotion .bg { position: absolute; left: 0; top: 200px; width: 100%; height: 500px; }
+#promotion .bg img { width: 100%; height: 100%; object-fit: cover;  }
+#promotion .popup { position: relative; width: 100%; text-align: center; }
+
+/* event */
+#event { margin-bottom: 100px; position: relative; }
+#event .inner { display: flex; }
+#event .event_link { display: flex; margin-left: 200px; }
+#event .event_link li { position: relative;}
+#event .event_link li .event_list { overflow: hidden; }
+#event .event_link li .event_list img { transition: all 0.6s; position: relative; display: block; width: 500px; }
+#event .event_link li:hover .event_list img {transform: scale(1.2,1.2);}
+
+#event .event_link li .event_plus img { position: absolute; left: 42%; top: 35%; opacity: 0; z-index: 3; }
+#event .event_link li:hover .event_plus img { transition: all 0.8s; transform: rotate(180deg); opacity: 1; }
+#event .event_link li .event_plus::after { position: absolute; left: 0; top: 0; opacity: 0; content: ''; display: block; transition: all 0.5s; width: 500px; height: 700px; background: rgba(0,0,0,0.5); }
+#event .event_link li:hover .event_plus::after { opacity: 1; }
+
+
+#event .event_link li:last-child { margin-top: 40px; }
+
+#event .event_link li dl { padding: 50px 0; width: 100%;}
+#event .event_link li dl dt { color: #FF6D0D; font-size: 1.8rem; font-weight: 600; margin-bottom: 10px; }
+#event .event_link li dl dt::after { left: calc(50% - 60px); top: 0; content: ""; display: block; width: 160px; height: 1px; background: #FF6D0D; }
+#event .event_link li dl dd { font-size: 2.4rem; font-weight: 700;  }
+
+
+/* instagram */
+#instagram { background: #FFEFCA; text-align: center; margin-top: 50px; }
+#instagram h2 { padding: 100px 0 !important;  }
+#instagram ul li { position: relative; margin-left: 3px; }
+#instagram ul li img { display: block; }
+
+#instagram ul li a::before { transition: all 0.5s; opacity: 0; content: ''; display: block; position: absolute; width: 295px; height: 315px; background: rgba(0,0,0,0.5) url(../img/ikon_Instagram_w.svg)no-repeat left 20px top 20px }
+#instagram ul li:hover a::before { opacity: 1; }
+
+#instagram .swiper-button-prev { color: #FFA629; background: #fff; border-radius: 50%; width: 70px; height: 70px; }
+#instagram .swiper-button-next { color: #FFA629; background: #fff; border-radius: 50%; width: 70px; height: 70px; }
+
+.instagram_button { margin-left: 47%; padding: 50px 0; }
+.instagram_button button { font-family: inherit; font-size: 20px; background: #FF6D0D; color: white; padding: 0.7em 1em; padding-left: 0.9em; display: flex; align-items: center; border: none; border-radius: 16px; overflow: hidden; transition: all 0.2s; cursor: pointer;}
+.instagram_button button span { display: block; margin-left: 0.3em; transition: all 0.3s ease-in-out;}
+.instagram_button button svg { display: block; transform-origin: center center; transition: transform 0.3s ease-in-out;}
+.instagram_button button:hover .svg-wrapper { animation: fly-1 0.6s ease-in-out infinite alternate;}
+.instagram_button button:hover svg {transform: translateX(1.2em) rotate(45deg) scale(1.1);}
+.instagram_button button:hover span {transform: translateX(5em);}
+.instagram_button button:active {transform: scale(0.95);}
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+
+/* footer */
+#footer { padding: 100px; }
+#footer .inner { display: flex; justify-content: space-between; }
+#footer ul { display: flex; }
+#footer .footer_txt { margin-right: auto; margin-left: 100px; }
+#footer .footer_txt .footer_link { padding-bottom: 20px; }
+#footer .footer_txt address { margin-bottom: 20px; }
+#footer .footer_link { gap: 40px; }
+#footer .footer_sns { gap: 20px; }
+
+/* gotop */
+.gotop {background: #FF6D0D url(../img/gotop.png) no-repeat center; border-radius: 50%; width: 100px; height: 100px; position: fixed; right: 50px; bottom: 50px; font-size: 0; z-index: 5;}
